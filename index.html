@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Home Page</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      .poppins-medium {
+        font-family: "Poppins", serif;
+        font-weight: 500;
+        font-style: normal;
+      }
+      .poppins-bold {
+        font-family: "Poppins", serif;
+        font-weight: 700;
+        font-style: normal;
+      }
+      .glow-button {
+        font-size: 1.2rem;
+        text-align: center;
+
+        color: white;
+        background: linear-gradient(90deg, #007bff, #00aaff);
+        border: none;
+        padding: 12px 30px;
+        border-radius: 30px;
+        box-shadow: none;
+        transition: box-shadow 0.3s ease, transform 0.2s ease;
+
+        gap: 10px;
+      }
+
+      .glow-button:hover {
+        box-shadow: 0 0 10px #007bff4b, 0 0 20px #007bff96, 0 0 30px #00aaff98;
+        transform: scale(1.05);
+      }
+
+      .glow-button:active {
+        transform: scale(0.98);
+      }
+
+      .arrow {
+        font-size: 1.2rem;
+        transform: translateX(0);
+        transition: 0.2s ease;
+      }
+
+      .glow-button:hover .arrow {
+        padding-left: 2rem;
+      }
+
+      .glows {
+        animation: blink 12s infinite;
+        -webkit-animation: blink 12s infinite;
+      }
+    </style>
+  </head>
+  <body>
+    <main
+      style="
+        background: linear-gradient(rgba(0, 0, 0, 0.403), black),
+          url(assets/olena-bohovyk-LHAJGaIU0I8-unsplash.jpg);
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      "
+    >
+      <div>
+        <div
+          style="
+            clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
+            height: 6rem;
+
+            width: 100%;
+            position: fixed;
+            top: 0;
+            /* From https://css.glass */
+            background: rgba(105, 116, 144, 0.38);
+
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border: 1px solid rgba(105, 116, 144, 0.3);
+          "
+        >
+          <div></div>
+        </div>
+      </div>
+      <div
+        style="
+          background: linear-gradient(90deg, rgb(0, 0, 0), transparent),
+            url(assets/gg.jpg);
+          width: 100%;
+          height: 100vh;
+          background-repeat: no-repeat;
+          background-size: cover;
+        "
+      >
+        <section
+          style="
+            color: white;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 2rem;
+            height: 100%;
+            animation: opec 2s linear;
+            padding-left: 1rem;
+          "
+        >
+          <h1 style="font-size: 5rem" class="poppins-bold">Chandrayaan-3</h1>
+          <h5
+            class="poppins-medium"
+            style="white-space: 10px; width: 40%; text-align: justify"
+          >
+            is India's third lunar mission, launched by the Indian Space
+            Research Organisation (ISRO) on July 14, 2023. It aimed to
+            demonstrate ISRO's capability to perform soft landings on the Moon,
+            following the partial success of Chandrayaan-2. The mission’s
+            primary goal was to achieve a successful landing near the Moon's
+            south pole, a region of great scientific interest due to its
+            potential water ice deposits. Chandrayaan-3 successfully landed on
+            the Moon on August 23, 2023, making India the first country to land
+            near the Moon’s south pole and enhancing India's position in global
+            space exploration.
+          </h5>
+          <div style="margin-top: 3rem">
+            <button class="glow-button glows">
+              Get Started
+              <span class="arrow">➜</span>
+            </button>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
