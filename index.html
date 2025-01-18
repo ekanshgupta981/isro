@@ -11,11 +11,18 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <title>Home Page</title>
     <style>
       * {
         margin: 0px;
         padding: 0px;
+      }
+      html {
+        scroll-behavior: smooth;
       }
       .poppins-medium {
         font-family: "Poppins", serif;
@@ -65,6 +72,103 @@
         animation: blink 12s infinite;
         -webkit-animation: blink 12s infinite;
       }
+      .navs a {
+        color: white;
+        text-decoration: none;
+        font-weight: 300;
+        transition: 100ms ease-in-out;
+        display: inline-block;
+        position: relative;
+        padding: 0.5rem 1rem;
+        overflow: hidden;
+      }
+
+      .navs a::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(90deg, #007bff, #00aaff);
+        border-radius: 40px;
+        transform: scale(0);
+        transition: transform 0.3s ease-in-out;
+        z-index: -1;
+      }
+
+      .navs a:hover::before {
+        transform: scale(1);
+      }
+
+      .navs a:hover {
+        color: white;
+        font-weight: 400;
+      }
+      @keyframes navss {
+        from {
+          top: -100px;
+        }
+        to {
+          top: 0;
+        }
+      }
+
+      /* mid */
+      .features-container {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+      }
+      .feature-card {
+        background: rgba(0, 0, 0, 0.7);
+        border: 1px solid #1c4e80;
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+        flex: 1;
+        animation: opec 1.5s linear;
+        transition: all 300ms linear;
+        cursor: pointer;
+      }
+      .feature-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        background: linear-gradient(90deg, #007bff, #00aaff);
+      }
+      .feature-icon {
+        font-size: 3rem;
+        margin-bottom: 15px;
+      }
+      .feature-title {
+        font-weight: 700;
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+      }
+      .feature-stat {
+        font-size: 2rem;
+        font-weight: 500;
+        margin-bottom: 10px;
+      }
+      .feature-desc {
+        font-size: 1rem;
+      }
+      .card_sec {
+        padding: 50px;
+        background: linear-gradient(black 25%, transparent);
+        color: white;
+        font-family: "Space Grotesk", sans-serif;
+      }
+      .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 1s ease-out, transform 1s ease-out;
+      }
+
+      .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
     </style>
   </head>
   <body>
@@ -81,14 +185,15 @@
       <div>
         <div
           style="
+            animation: navss 1s linear;
             clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
             height: 6rem;
 
             width: 100%;
             position: fixed;
             top: 0;
-            /* From https://css.glass */
-            background: rgba(105, 116, 144, 0.38);
+
+            background: linear-gradient(#007bff28, #00aaff1c);
 
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
             backdrop-filter: blur(5px);
@@ -96,12 +201,41 @@
             border: 1px solid rgba(105, 116, 144, 0.3);
           "
         >
-          <div></div>
+          <div
+            style="display: flex; justify-content: center; font-size: 1rem"
+            class="poppins-medium"
+          >
+            <div
+              style="
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                width: 80%;
+              "
+              class="navs"
+            >
+              <h4><a href="">Home</a></h4>
+              <h4><a href="#key_fet">Feature</a></h4>
+              <h4><a href="">Activity</a></h4>
+              <div
+                style="display: flex; justify-content: center; margin-top: 13px"
+              >
+                <img src="/assets/11.png" alt="" style="width: 5rem" />
+              </div>
+              <h4><a href="">Service</a></h4>
+              <h4><a href="">Program</a></h4>
+              <h4><a href="">Resources</a></h4>
+            </div>
+          </div>
         </div>
       </div>
       <div
         style="
-          background: linear-gradient(90deg, rgb(0, 0, 0), transparent),
+          background: linear-gradient(
+              rgb(0, 0, 0) 2%,
+              transparent,
+              rgb(0, 0, 0)
+            ),
             url(assets/gg.jpg);
           width: 100%;
           height: 100vh;
@@ -118,13 +252,15 @@
             justify-content: center;
             gap: 2rem;
             height: 100%;
-            animation: opec 2s linear;
-            padding-left: 1rem;
+
+            padding-left: 3rem;
           "
         >
-          <h1 style="font-size: 5rem" class="poppins-bold">Chandrayaan-3</h1>
+          <h1 style="font-size: 5rem" class="poppins-bold fade-in">
+            Chandrayaan-3
+          </h1>
           <h5
-            class="poppins-medium"
+            class="poppins-medium fade-in"
             style="white-space: 10px; width: 40%; text-align: justify"
           >
             is India's third lunar mission, launched by the Indian Space
@@ -138,14 +274,79 @@
             near the Moon’s south pole and enhancing India's position in global
             space exploration.
           </h5>
-          <div style="margin-top: 3rem">
+          <div style="margin-top: 3rem" class="fade-in">
             <button class="glow-button glows">
-              Get Started
+              Know More
               <span class="arrow">➜</span>
             </button>
           </div>
         </section>
       </div>
+
+      <!-- key wala section -->
+
+      <section class="card_sec" id="key_fet">
+        <div class="fade-in">
+          <div style="margin-bottom: 40px; text-align: center">
+            <h1 class="fw-bold">Key Features of Chandrayaan-3</h1>
+            <p style="color: lightgray">
+              Explore the groundbreaking achievements and highlights of India's
+              historic lunar mission.
+            </p>
+          </div>
+          <div class="features-container" style="animation: opec 1.5s linear">
+            <!-- Feature 1 -->
+            <div class="feature-card">
+              <div class="feature-icon material-icons">public</div>
+              <div class="feature-title">Successful Soft Landing</div>
+              <div class="feature-stat">South Pole</div>
+              <div class="feature-desc">
+                Chandrayaan-3 became the first spacecraft to achieve a soft
+                landing on the Moon's South Pole.
+              </div>
+            </div>
+            <!-- Feature 2 -->
+            <div class="feature-card">
+              <div class="feature-icon material-icons">science</div>
+              <div class="feature-title">Advanced Instruments</div>
+              <div class="feature-stat">6 Payloads</div>
+              <div class="feature-desc">
+                Equipped with cutting-edge instruments for studying the Moon's
+                surface and seismic activity.
+              </div>
+            </div>
+            <!-- Feature 3 -->
+            <div class="feature-card">
+              <div class="feature-icon material-icons">wb_sunny</div>
+              <div class="feature-title">Solar Power Utilization</div>
+              <div class="feature-stat">100% Solar-Powered</div>
+              <div class="feature-desc">
+                The lander and rover utilize solar panels to operate effectively
+                on the lunar surface.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const elements = document.querySelectorAll(".fade-in");
+
+        const observer = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target); // Stop observing once it's visible
+              }
+            });
+          },
+          { threshold: 0.5 }
+        );
+
+        elements.forEach((element) => observer.observe(element));
+      });
+    </script>
   </body>
 </html>
