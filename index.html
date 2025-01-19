@@ -147,7 +147,7 @@
       .feature-card:hover {
         transform: translateY(-10px);
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-        background: linear-gradient(90deg, #007bff, #00aaff);
+        background: linear-gradient(#00aaff, #007bff);
       }
       .feature-icon {
         font-size: 3rem;
@@ -180,6 +180,9 @@
       .fade-in.visible {
         opacity: 1;
         transform: translateY(0);
+      }
+      .main_heading::first-letter {
+        font-size: 6rem !important;
       }
     </style>
   </head>
@@ -227,7 +230,7 @@
               class="navs"
             >
               <h4><a href="">Home</a></h4>
-              <h4><a href="#key_fet">Feature</a></h4>
+              <h4><a href="#Achievements">Achievements</a></h4>
               <h4><a href="">Activity</a></h4>
               <div
                 style="display: flex; justify-content: center; margin-top: 13px"
@@ -268,7 +271,7 @@
             padding-left: 3rem;
           "
         >
-          <h1 style="font-size: 5rem" class="poppins-bold fade-in">
+          <h1 style="font-size: 5rem" class="poppins-bold fade-in main_heading">
             Chandrayaan-3
           </h1>
           <h5
@@ -287,7 +290,7 @@
             space exploration.
           </h5>
           <div style="margin-top: 3rem" class="fade-in">
-            <button class="glow-button glows">
+            <button class="glow-button glows" id="Achievements">
               Know More
               <span class="arrow">➜</span>
             </button>
@@ -295,9 +298,9 @@
         </section>
       </div>
 
-      <!-- key wala section -->
+      <!-- Achievements wala section -->
 
-      <section class="card_sec" id="key_fet">
+      <section class="card_sec">
         <div class="fade-in">
           <div class="features-container" style="animation: opec 1.5s linear">
             <!-- Feature 1 -->
@@ -352,6 +355,8 @@
             historic lunar mission.
           </p>
         </div>
+
+        <!-- =======> speed <=========== -->
         <div>
           <div
             style="
@@ -375,7 +380,7 @@
                 text-transform: uppercase;
               "
             >
-              Chandrayaan 3 Pragyan rover
+              Chandrayaan 3 Pragyan rover speed
             </h3>
           </div>
           <div
@@ -398,7 +403,7 @@
                 "
                 class="satoshi"
               >
-                moves at a glacial speed
+                It can moves at a glacial speed..
               </h3>
               <p
                 style="
@@ -423,7 +428,165 @@
             <div style="margin-right: 3rem" class="fade-in">
               <img
                 src="assets/rt.jpg"
-                style="width: 40rem; border-radius: 20px"
+                style="width: 45rem; border-radius: 20px"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- =======> capability <=========== -->
+        <div>
+          <div style="display: flex; justify-content: end">
+            <div
+              style="
+                margin-top: 6rem;
+                background: linear-gradient(90deg, #007bff, #00aaff);
+                clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 10% 100%);
+                width: 39rem;
+                margin-bottom: 1rem;
+                display: flex;
+                justify-content: center;
+
+                align-items: center;
+                height: 3rem;
+              "
+            >
+              <h3
+                style="
+                  color: white;
+                  letter-spacing: 0.1rem;
+                  font-weight: 300;
+                  text-transform: uppercase;
+                "
+              >
+                Chandrayaan 3 Pragyan rover capability
+              </h3>
+            </div>
+          </div>
+          <div
+            style="
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+            "
+          >
+            <div style="margin-left: 3rem" class="fade-in">
+              <img
+                src="assets/rvr.jpg"
+                style="width: 45rem; border-radius: 20px"
+              />
+            </div>
+            <div class="fade-in">
+              <h3
+                style="
+                  color: white;
+                  font-size: 3rem;
+                  text-transform: uppercase;
+                  width: 38rem;
+
+                  font-weight: 800;
+                  font-size: 3rem;
+                  padding-left: 1rem;
+                "
+                class="satoshi"
+              >
+                It have unique rocker-bogie system..
+              </h3>
+              <p
+                style="
+                  text-align: justify;
+                  line-height: 2rem;
+                  width: 35rem;
+                  color: rgb(133, 133, 133);
+                  padding-left: 1rem;
+                "
+              >
+                The moon’s surface is full of craters, large rocks and dips.
+                This means the rover needs the suspension system of an extreme
+                off-roader. The six-wheel rocker-bogie system that uses two ‘L’
+                shaped sections gives it a much-needed ‘leverage’ and the
+                ability to clamber over rocks and sections that are higher than
+                itself. Despite the fact that Pragyan is small, the rocker-bogie
+                mechanism has a 50mm range of movement, where an individual
+                wheel can move up or down without altering the attitude of the
+                rover too much.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- =======> ADAS <=========== -->
+        <div>
+          <div
+            style="
+              margin-top: 6rem;
+              background: linear-gradient(90deg, #007bff, #00aaff);
+              clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 0% 100%);
+              width: 39rem;
+              margin-bottom: 1rem;
+              display: flex;
+              justify-content: center;
+
+              align-items: center;
+              height: 3rem;
+            "
+          >
+            <h3
+              style="
+                color: white;
+                letter-spacing: 0.1rem;
+                font-weight: 300;
+                text-transform: uppercase;
+              "
+            >
+              Chandrayaan 3 Pragyan rover has ADAS
+            </h3>
+          </div>
+          <div
+            style="
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+            "
+          >
+            <div class="fade-in">
+              <h3
+                style="
+                  color: white;
+                  font-size: 3rem;
+                  text-transform: uppercase;
+                  width: 35rem;
+                  font-weight: 800;
+                  font-size: 3rem;
+                  padding-left: 1rem;
+                "
+                class="satoshi"
+              >
+                It is equipped with navigation camera..
+              </h3>
+              <p
+                style="
+                  text-align: justify;
+                  line-height: 2rem;
+                  width: 35rem;
+                  color: rgb(133, 133, 133);
+                  padding-left: 1rem;
+                "
+              >
+                Just like many ADAS set-ups, Pragyan has a couple of
+                ‘navigation’ cameras up front that help it ‘see’ what it has to
+                drive over. Pragyan, however, is not fully autonomous. ISRO
+                mission control can issue instructions from Earth, and that’s
+                especially if it wants to make big course corrections or deploy
+                any of the experimental sensors. Pragyan will not stray more
+                than 500m from the lander as communications with Earth are
+                routed through the Vikram lander.
+              </p>
+            </div>
+            <div style="margin-right: 3rem" class="fade-in">
+              <img
+                src="assets/camera.jpg"
+                style="width: 45rem; border-radius: 20px"
               />
             </div>
           </div>
@@ -439,7 +602,7 @@
             entries.forEach((entry) => {
               if (entry.isIntersecting) {
                 entry.target.classList.add("visible");
-                observer.unobserve(entry.target); // Stop observing once it's visible
+                observer.unobserve(entry.target);
               }
             });
           },
