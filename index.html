@@ -15,11 +15,20 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=satoshi@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=satellite_alt"
+    />
     <title>Home Page</title>
     <style>
       * {
         margin: 0px;
         padding: 0px;
+        font-family: "Space Grotesk", sans-serif;
       }
       html {
         scroll-behavior: smooth;
@@ -33,6 +42,9 @@
         font-family: "Poppins", serif;
         font-weight: 700;
         font-style: normal;
+      }
+      .satoshi {
+        font-family: "Satoshi", sans-serif;
       }
       .glow-button {
         font-size: 1.2rem;
@@ -131,6 +143,7 @@
         transition: all 300ms linear;
         cursor: pointer;
       }
+
       .feature-card:hover {
         transform: translateY(-10px);
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
@@ -155,9 +168,8 @@
       }
       .card_sec {
         padding: 50px;
-        background: linear-gradient(black 25%, transparent);
+        background: linear-gradient(black, black);
         color: white;
-        font-family: "Space Grotesk", sans-serif;
       }
       .fade-in {
         opacity: 0;
@@ -287,13 +299,6 @@
 
       <section class="card_sec" id="key_fet">
         <div class="fade-in">
-          <div style="margin-bottom: 40px; text-align: center">
-            <h1 class="fw-bold">Key Features of Chandrayaan-3</h1>
-            <p style="color: lightgray">
-              Explore the groundbreaking achievements and highlights of India's
-              historic lunar mission.
-            </p>
-          </div>
           <div class="features-container" style="animation: opec 1.5s linear">
             <!-- Feature 1 -->
             <div class="feature-card">
@@ -307,7 +312,9 @@
             </div>
             <!-- Feature 2 -->
             <div class="feature-card">
-              <div class="feature-icon material-icons">science</div>
+              <div class="feature-icon material-symbols-outlined">
+                satellite_alt
+              </div>
               <div class="feature-title">Advanced Instruments</div>
               <div class="feature-stat">6 Payloads</div>
               <div class="feature-desc">
@@ -324,6 +331,100 @@
                 The lander and rover utilize solar panels to operate effectively
                 on the lunar surface.
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Mission section -->
+      <section>
+        <div
+          style="
+            text-align: center;
+            color: white;
+            padding-top: 3rem;
+            background: linear-gradient(black, transparent);
+          "
+        >
+          <h1>Key Features of Chandrayaan-3</h1>
+          <p style="color: lightgray">
+            Explore the groundbreaking achievements and highlights of India's
+            historic lunar mission.
+          </p>
+        </div>
+        <div>
+          <div
+            style="
+              margin-top: 6rem;
+              background: linear-gradient(90deg, #007bff, #00aaff);
+              clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 0% 100%);
+              width: 35rem;
+              margin-bottom: 1rem;
+              display: flex;
+              justify-content: center;
+
+              align-items: center;
+              height: 3rem;
+            "
+          >
+            <h3
+              style="
+                color: white;
+                letter-spacing: 0.1rem;
+                font-weight: 300;
+                text-transform: uppercase;
+              "
+            >
+              Chandrayaan 3 Pragyan rover
+            </h3>
+          </div>
+          <div
+            style="
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+            "
+          >
+            <div class="fade-in">
+              <h3
+                style="
+                  color: white;
+                  font-size: 3rem;
+                  text-transform: uppercase;
+                  width: 35rem;
+                  font-weight: 800;
+                  font-size: 3rem;
+                  padding-left: 1rem;
+                "
+                class="satoshi"
+              >
+                moves at a glacial speed
+              </h3>
+              <p
+                style="
+                  text-align: justify;
+                  line-height: 2rem;
+                  width: 35rem;
+                  color: rgb(133, 133, 133);
+                  padding-left: 1rem;
+                "
+              >
+                There are no speed limits on the moon, no speed cameras and no
+                policemen. Despite this, the speed of the Pragyan rover is just
+                one cm a second; for the record, that’s 0.036kph. Is that too
+                slow? Probably, and that’s especially true if you are trying to
+                get out of trouble, or are in a position where traction is
+                limited and you need momentum to get unstuck. But solar power
+                can only currently deliver so much useable power. In sharp
+                contrast, the speed of the LVM3 rocket that carried Chandrayaan
+                to the moon, is roughly Mach 30, or 30 times the speed of sound.
+              </p>
+            </div>
+            <div style="margin-right: 3rem" class="fade-in">
+              <img
+                src="assets/rt.jpg"
+                style="width: 40rem; border-radius: 20px"
+              />
             </div>
           </div>
         </div>
