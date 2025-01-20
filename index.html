@@ -257,7 +257,9 @@
               </div>
               <h4><a href="">Service</a></h4>
               <h4><a href="">Program</a></h4>
+
               <h4><a id="music"></a></h4>
+
               <audio
                 loop
                 src="assets/please-calm-my-mind-125566.mp3"
@@ -313,10 +315,12 @@
             space exploration.
           </h5>
           <div style="margin-top: 3rem" class="fade-in">
-            <button class="glow-button glows" id="Achievements">
-              Know More
-              <span class="arrow">➜</span>
-            </button>
+            <a href="#Achievements"
+              ><button class="glow-button glows" id="Achievements">
+                Know More
+                <span class="arrow">➜</span>
+              </button></a
+            >
           </div>
         </section>
       </div>
@@ -615,6 +619,20 @@
           </div>
         </div>
       </section>
+      <!-- path -->
+      <section>
+        <div>
+          <div style="text-align: center; color: white; padding-top: 3rem">
+            <h1>Path way of Chandrayaan-3</h1>
+            <p style="color: lightgray">
+              Chandrayaan - 3 take gravity helps to reach moon north side
+            </p>
+          </div>
+          <div style="display: flex; justify-content: center" class="fade-in">
+            <img src="assets/Artboard 1.png" alt="" style="width: 85%" />
+          </div>
+        </div>
+      </section>
     </main>
     <script>
       var bgMusic = false;
@@ -629,6 +647,7 @@
         bgMusic = !bgMusic;
         if (bgMusic) {
           bgMusicAudio.play();
+          bgMusicAudio.currentTime = 0;
         } else bgMusicAudio.pause();
 
         music_btn.innerHTML = `Music ${bgMusic ? "On" : "Off"}`;
