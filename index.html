@@ -84,7 +84,7 @@
         animation: blink 12s infinite;
         -webkit-animation: blink 12s infinite;
       }
-      .navs a {
+      .navs h4 a {
         color: white;
         text-decoration: none;
         font-weight: 300;
@@ -95,7 +95,7 @@
         overflow: hidden;
       }
 
-      .navs a::before {
+      .navs h4 a::before {
         content: "";
         position: absolute;
         top: 0;
@@ -109,13 +109,29 @@
         z-index: -1;
       }
 
-      .navs a:hover::before {
+      .navs h4 a:hover::before {
         transform: scale(1);
       }
-
-      .navs a:hover {
+      .navs h4 {
+        cursor: pointer;
+      }
+      .navs h4 a:hover {
         color: white;
         font-weight: 400;
+      }
+      .navs {
+        user-select: none;
+      }
+      @keyframes rotate {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      #cd {
+        animation: rotate 1s infinite linear;
       }
       @keyframes navss {
         from {
@@ -186,7 +202,7 @@
       }
     </style>
   </head>
-  <body>
+  <body id="home">
     <main
       style="
         background: linear-gradient(rgba(0, 0, 0, 0.403), black),
@@ -229,17 +245,24 @@
               "
               class="navs"
             >
-              <h4><a href="">Home</a></h4>
+              <h4><a href="#home">Home</a></h4>
               <h4><a href="#Achievements">Achievements</a></h4>
-              <h4><a href="">Activity</a></h4>
+              <h4><a href="#feature">Feature</a></h4>
               <div
                 style="display: flex; justify-content: center; margin-top: 13px"
               >
-                <img src="/assets/11.png" alt="" style="width: 5rem" />
+                <a href="#home">
+                  <img src="/assets/11.png" alt="" style="width: 5rem"
+                /></a>
               </div>
               <h4><a href="">Service</a></h4>
               <h4><a href="">Program</a></h4>
-              <h4><a href="">Resources</a></h4>
+              <h4><a id="music"></a></h4>
+              <audio
+                loop
+                src="assets/please-calm-my-mind-125566.mp3"
+                id="bg-music"
+              ></audio>
             </div>
           </div>
         </div>
@@ -339,8 +362,8 @@
         </div>
       </section>
 
-      <!-- Mission section -->
-      <section>
+      <!-- feature section -->
+      <section id="feature">
         <div
           style="
             text-align: center;
@@ -516,7 +539,7 @@
         </div>
 
         <!-- =======> ADAS <=========== -->
-        <div>
+        <div style="padding-bottom: 3rem">
           <div
             style="
               margin-top: 6rem;
@@ -594,6 +617,22 @@
       </section>
     </main>
     <script>
+      var bgMusic = false;
+      var turn;
+      var bgMusic = false;
+      var music_btn = document.getElementById("music");
+      var bgMusicAudio = document.getElementById("bg-music");
+
+      music_btn.innerHTML = `Music ${bgMusic ? "On" : "Off"}`;
+
+      music_btn.onclick = function () {
+        bgMusic = !bgMusic;
+        if (bgMusic) {
+          bgMusicAudio.play();
+        } else bgMusicAudio.pause();
+
+        music_btn.innerHTML = `Music ${bgMusic ? "On" : "Off"}`;
+      };
       document.addEventListener("DOMContentLoaded", () => {
         const elements = document.querySelectorAll(".fade-in");
 
