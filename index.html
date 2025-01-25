@@ -8,6 +8,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
@@ -291,6 +296,76 @@
             url("assets/daniel-olah-HNkgPFBShSw-unsplash\ \(1\).jpg") !important;
         }
       }
+      .footer {
+        background: linear-gradient(to bottom, #020306, #080a16);
+        color: #fff;
+        padding: 40px 20px;
+        font-family: "Arial", sans-serif;
+      }
+
+      .footer-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding-bottom: 20px;
+      }
+
+      .footer-container > div {
+        flex: 1;
+        margin: 10px;
+      }
+
+      .footer h3 {
+        color: #00aaff;
+        margin-bottom: 10px;
+      }
+
+      .footer p {
+        line-height: 1.5;
+        font-size: 14px;
+      }
+
+      .footer-links ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .footer-links ul li {
+        margin: 5px 0;
+      }
+
+      .footer-links ul li a {
+        text-decoration: none;
+        color: #fff;
+        transition: color 0.3s;
+      }
+
+      .footer-links ul li a:hover {
+        color: #00aaff;
+      }
+
+      .social-icons {
+        display: flex;
+        gap: 15px;
+      }
+
+      .social-icons .icon {
+        font-size: 20px;
+        color: #fff;
+        transition: color 0.3s;
+      }
+
+      .social-icons .icon:hover {
+        color: #00aaff;
+      }
+
+      .footer-bottom {
+        text-align: center;
+        padding: 10px;
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.6);
+      }
     </style>
   </head>
   <body id="home">
@@ -347,7 +422,7 @@
                 /></a>
               </div>
               <h4><a href="#Lunarbound">Lunarbound</a></h4>
-              <h4><a href="">Program</a></h4>
+              <h4><a href="#Social">Follow Us</a></h4>
 
               <h4><a id="music"></a></h4>
 
@@ -797,6 +872,39 @@
           </div>
         </div>
       </section>
+
+      <footer class="footer" id="Social">
+        <div class="footer-container fade-in">
+          <div class="footer-about">
+            <h3>About Chandrayaan-3</h3>
+            <p>
+              Chandrayaan-3 marks India's remarkable achievement in lunar
+              exploration, furthering ISRO's vision of space exploration.
+            </p>
+          </div>
+          <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#achievements">Achievements</a></li>
+              <li><a href="#feature">Feature</a></li>
+              <li><a href="#Lunarbound">Lunarbound</a></li>
+            </ul>
+          </div>
+          <div class="footer-social">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+              <a href="#" class="icon"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="icon"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="icon"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="icon"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 ISRO | All Rights Reserved</p>
+        </div>
+      </footer>
     </main>
     <script>
       var bgMusic = false;
